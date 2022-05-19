@@ -1,0 +1,41 @@
+.card {
+    margin: 10px;
+    width: 200px;
+    height: 250px;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.card > .front.flipped {
+    transform: rotateY(-180deg);
+}
+
+.card > .back.flipped {
+    transform: rotateY(0deg);
+}
+
+.front,
+.back {
+    width: inherit;
+    height: inherit;
+    background: #0a48bd;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform 0.4s linear;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+.info {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    perspective: 600px;
+}
